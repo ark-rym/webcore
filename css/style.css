@@ -1,0 +1,425 @@
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: TT Lakes;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1b1c21
+}
+
+/* Header styles start */
+
+.container {
+  padding: 0 16px;
+  /* border: 1px solid black; */
+}
+
+
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #D9FFF5;
+}
+
+.header__inner {
+  min-height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  margin-right: 16px;
+  /* position: relative; */
+}
+
+.search {
+  margin-right: 0;
+}
+
+.header__button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #FF3E79;
+  border-radius: 20px;
+  border: none;
+  padding-left: 8px; 
+} 
+
+/* .burger-menu__button::after {
+  content: url("/img/menu.svg");
+  position: absolute;
+  top: 12px;
+  left: 11px;
+} */
+
+.burger-menu__button {
+  background-image: url("/img/menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.call,
+.chat,
+.profile {
+  display: none;
+}
+
+.call__button::after {
+  content: url("/img/call.svg");
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.chat__button::after {
+  content: url("/img/chat.svg");
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.profile__button::after {
+  content: url("/img/profile.svg");
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
+.settings__button::after {
+  content: url("/img/settings.svg");
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.search__button::after {
+  content: url("/img/search.svg");
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+
+
+.settings__button::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 4px;
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+  border-radius: 1px;
+  border: none;
+}
+
+
+/* .burder-menu_buttom::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 11px;
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #ffffff;
+} */
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .burger-menu__button::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 4px;
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    border-radius: 1px;
+    border: none;
+  }
+
+  .burger-menu__button {
+    margin-right: 20px;
+  }
+
+  .call {
+    display: block;
+  }
+  .chat {
+    display: block;
+  }
+  .profile {
+    display: block;
+    margin-right: 40px;
+  }
+
+}
+
+@media (min-width: 1120px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .header {
+    background-color: #F8F8F8;
+    border-bottom: none;
+  }
+  .header__inner {
+  
+    align-items: flex-end;
+  }
+  
+  .burger-menu,
+  .logo,
+  .call,
+  .chat,
+  .profile  {
+    display: none;  
+  }
+
+  .item {
+    margin-right: 0;
+    margin-left: 160px;
+    position: relative;
+  }
+
+  .settings__button::before {
+    content: "Оставить заявку";
+    position: absolute;
+    font-family: TT Lakes;
+    font-size: 14px;
+    line-height: 24px;
+    top: 10px;
+    left: -125px;
+    min-width: 125px;
+    max-height: 24px;;
+    background-color: #f8f8f8;
+  }
+  .search__button::before {
+    content: "Статус ремонта";
+    position: absolute;
+    font-family: TT Lakes;
+    font-size: 14px;
+    line-height: 24px;
+    top: 10px;
+    left: -125px;
+    min-width: 125px;
+    max-height: 24px;;
+    background-color: #f8f8f8;
+  }
+}
+
+/* Header styles end */
+
+
+/* Main styles start */
+
+.main {
+  background-color: #F8F8F8;
+}
+
+.container-main {
+  padding: 24px 16px;
+  /* border: 1px solid black; */
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 10px 0;
+}
+
+.title_text {
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.title__text::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  left: -16px;
+  top: 0px;
+  background-color: #41F6D7;
+  border-radius: 2px;
+}
+
+.menu {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.menu__btn {
+  border: 2px solid #F8F8F8;
+  background-color: #f8f8f8;
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px; 
+  color: #7E7E82;
+  border-radius: 8px;
+}
+
+.menu__btn:first-child {
+  border-color: #B8FFEC;
+  background-color: #ffffff;
+  
+}
+
+.main__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info__text {
+  max-height: 90px;
+  max-width: 312px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  margin-bottom: 16px;
+}
+/* 
+.info__read-more {
+  padding: 40px;
+  vertical-align: center;
+} */
+
+.info__read-more-button {
+  padding-left: 28px;
+  background: url("/img/arr.svg") no-repeat 9px 2px;
+  border: none;
+}
+
+.picture {
+  margin: 22px -16px;
+}
+
+.picture__1 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container-main {
+    padding: 24px 24px;
+  }
+
+  .title {
+    margin-bottom: 32px;
+  }
+
+  .title__text::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  left: -24px;
+  top: 0;
+  background-color: #41F6D7;
+  border-radius: 2px;
+  }
+
+  .menu {
+    margin-bottom: 32px;
+  }
+
+  .main__inner{
+    justify-content  : space-between;
+  }
+
+  .info__text {
+    max-height: 160px;
+    line-height: 20px;
+  }
+
+  .picture {
+    width: 360px;
+    height: auto;
+    margin: 0;
+    /* margin-left: 48px; */
+  }
+}
+
+@media (min-width: 1120px) {
+  .container-main {
+    padding: 16px 32px;
+  }
+
+  .title {
+    position: absolute;
+    top: 47px;
+    left: 32px;
+    margin: 0;
+  }
+
+  .title__text::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  left: -32px;
+  top: 0;
+  background-color: #41F6D7;
+  border-radius: 2px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+  }
+
+  .menu__btn {
+    padding: 9px 20px;
+  }
+
+  .main__inner {
+    flex-grow: 1;
+  }
+
+  .info__text {
+    padding: 16px 0;
+    max-height: 160px;
+    min-width: 490px;
+    line-height: 20px;
+  }
+
+  .picture {
+    width: 520px;
+    height: 380;
+    margin: 0;
+    margin-left: 36px;
+  }
+}
+
+/* Main styles end */
